@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+  <meta name="keywords" content="Scene Co-pilot, BlenderGPT, 3d assests dataset">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scene Co-pilot: Procedural Text to Video Generation with Human in the Loop</title>
+  <link rel="icon" type="./static/images/fav.png" href="/images/favicon.ico">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Scene Co-pilot: Procedural Text to Video Generation with Human in the Loop</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Zhaofang Qian<sup>1</sup>,
+			  </span>
+            <span class="author-block">
+              Abolfazl Sharifi<sup>2</sup>,
+			  </span>
+            <span class="author-block">
+              Tucker Carroll<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Ser-Nam Lim<sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Central Florida,</span>
+            <span class="author-block"><sup>2</sup>University of Kashan</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://anonymous.4open.science/r/scene_copilot-1EF6/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://anonymous.4open.science/r/scene_copilot-1EF6/dataset.csv"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/a blooming cherry blossom tree under a blue sky with white clouds.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/a monument under the blue sky.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/clouds formation in the sky at sunset.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/clouds over railway.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ferry under bridge on river near city in malaysia.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/view of a jack o lantern with pumpkins in a smoky garden.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+			<p>
+          Video generation has achieved impressive quality, but it still suffers from artifacts such as temporal inconsistency and violation of physical laws. Leveraging 3D scenes can fundamentally resolve these issues by providing precise control over scene entities. To facilitate the easy generation of diverse photorealistic scenes, we propose  Scene Copilo, a framework combining large language models (LLMs) with a procedural 3D scene generator. Specifically, Scene Copilot consists of Scene Codex, BlenderGPT, and Human in the loop. Scene Codex is designed to translate textual user input into commands understandable by the 3D scene generator. BlenderGPT provides users with an intuitive and direct way to precisely control the generated 3D scene and the final output video. Furthermore, users can utilize Blender UI to receive instant visual feedback. Additionally, we have curated a procedural dataset of objects in code format to further enhance our system's capabilities. Each component works seamlessly together to support users in generating desired 3D scenes. Extensive experiments demonstrate the capability of our framework in customizing 3D scenes and video generation.
+			</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">The Pipeline</h2>
+        <div class="publication-video">
+          <img src="./static/images/figure_pipeline_chart.jpg"></img>
+        </div>
+	<div class="content has-text-justified">
+		<p>
+			Overview of the Scene Copilot with procedural dataset. Starting with a user textual input, Scene Codex combines an LLM with an RAG database of the Infinigen code and generates an Infinigen executable Python command. Infinigen initially creates a coarse scene, which is converted into textual format so that LLMs can comprehend objects and metadata in the scene. Such scene file is condensed into a coarse RAG database. BlenderGPT, incorporating Blender and LLM, utilizes this database to edit and modify the 3D contents in the scene with user involved through either textual or visual interaction. The updated coarse scene is fed back to Infinigen to create a fine scene. Similar to coarse scene, it is condensed into a fine RAG database, and BlenderGPT collaborates both databases while editing the final scene. Meanwhile, The procedural dataset will provide the requested procedural asset code. The finished scene is then rendered by Inifnigen and outputs the requested video.
+		</p>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{Zhaofang2025scenecopilot,
+  author    = {Zhaofang Qian, Abolfazl Sharifi, Tucker Carroll, Ser-Nam Lim},
+  title     = {Scene Co-pilot: Procedural Text to Video Generation with Human in the Loop},
+  journal   = {CVPR},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://anonymous.4open.science/r/scene_copilot-1EF6/README.md" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+		<center>
+          <p>
+            This website used the this <a
+              href="https://github.com/nerfies/nerfies.github.io">repository</a> as a start point.
+			  
+          </p>
+		</center>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
