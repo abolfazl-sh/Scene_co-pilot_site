@@ -1,6 +1,6 @@
 # Scene Co-pilot
 
-This is the repository that contains source code for the [Scene Co-pilot website](https://scenecopilot.github.io).
+This is the repository that contains source code for the [Scene Co-pilot website](https://abolfazl-sh.github.io/Scene_co-pilot_site/).
 
 If you find Scene Co-pilot useful for your work please cite:
 ```
